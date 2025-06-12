@@ -7,7 +7,7 @@ interface CountContextProps {
 }
 export const Context = createContext<CountContextProps | undefined>(undefined);
 
-export const CountContext = ({ children }: { children: ReactNode }) => {
+export const CountProvider = ({ children }: { children: ReactNode }) => {
   const [count, setCount] = useState<number>(0);
 
   const increment = () => setCount((count) => count + 1);
